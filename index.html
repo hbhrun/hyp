@@ -1,43 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>测试</title>
-</head>
-
-<body>
-  <div v-scope>
-    <div><button @click="search"><font color="red" size="3">测试</font></button>
-    </font></div>
-    <table bgcolor="LightCyan" border="2" cellspacing="0" cellpadding="3">
-      <tr>
-        <th>学号</th>
-        <th>姓名</th>
-      </tr>
-      <tr align="center" v-for="student in students">
-        <td>{{student.zhanghao}}</td>
-        <td>{{student.name}}</td> 
-      </tr>
-    </table>
-  </div>
-</body>
-
-<script type="module">
-  import { createApp } from 'https://unpkg.com/petite-vue?module'
-  createApp({
-    students: [],
-    search() {
-      var that = this
-      var url = "http://api.smfx.org/getdata/getStudentZhanghao/202201"
-      fetch(url).then((res) => res.json()).then(
-        function (data) {
-          that.students = data
-        }
-      )
-    },
-  }).mount()
-</script>
-</body>
-
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./images/logo265.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>瓶行时空设计工作室</title>
+    <script type="module" crossorigin src="./assets/index-DWuB00FK.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-TPisSqE0.css">
+  </head>
+  <body>
+    <div id="root"><!--app-html--></div>
+  </body>
 </html>
